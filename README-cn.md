@@ -24,6 +24,22 @@
 - 增加 hover 弹层，用于查看更详细的 usage 信息。
 - 修复此前因压缩 bundle 中辅助函数命名冲突导致的白屏问题。
 
+## 使用辅助 Skill
+
+这次修改过程已经整理成一个可复用的 `vsix-ui-patcher` skill，后续大家可以让大模型按照这个 skill 来辅助修改已经打包好的 VSIX UI bundle。
+
+在当前工作区中，这个 skill 位于：
+
+- [`../vsix-ui-patcher`](../vsix-ui-patcher)
+
+示例提示词：
+
+```text
+Use $vsix-ui-patcher to unpack this VSIX, inspect the built webview bundle, make the requested UI change, validate it, and repack a working VSIX.
+```
+
+这个 skill 记录了本次修改中的关键经验，包括如何避免压缩 bundle 中的符号命名冲突、如何修复按百分比显示的圆圈进度条、如何保留上游 License 说明，以及如何从正确目录重新打包 VSIX。
+
 ## 声明
 
 本文件是针对本地解包、学习和补丁修改编写的说明文档，不替代官方文档，也不修改原始授权条款。

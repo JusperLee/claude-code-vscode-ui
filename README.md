@@ -24,6 +24,22 @@ This local patch currently includes these visible changes:
 - Added a hover popup for more detailed usage information.
 - Fixed the earlier white-screen issue caused by helper-name collisions in the minified bundle.
 
+## Using the Helper Skill
+
+A reusable skill named `vsix-ui-patcher` was created from this modification process so other LLM agents can follow the same workflow when patching built VSIX UI bundles.
+
+In this workspace, the skill is available at:
+
+- [`../vsix-ui-patcher`](../vsix-ui-patcher)
+
+Example prompt:
+
+```text
+Use $vsix-ui-patcher to unpack this VSIX, inspect the built webview bundle, make the requested UI change, validate it, and repack a working VSIX.
+```
+
+The skill records the key lessons from this patch, including how to avoid minified-symbol collisions, how to fix percentage-driven progress rings, how to preserve upstream license notices, and how to repack from the correct directory.
+
 ## Notice
 
 This document is a local learning note for unpacking, studying, and patching the VSIX package. It does not replace the official documentation and does not change the original license terms.

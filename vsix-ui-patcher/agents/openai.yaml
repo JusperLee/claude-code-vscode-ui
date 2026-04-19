@@ -1,0 +1,4 @@
+interface:
+  display_name: "VSIX UI Patcher"
+  short_description: "Patch built VSIX UI bundles safely"
+  default_prompt: "Use $vsix-ui-patcher to unpack a VSIX, patch its UI bundle, verify it, and repack it safely."

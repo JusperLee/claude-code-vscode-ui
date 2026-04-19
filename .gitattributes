@@ -1,0 +1,1 @@
+extension/resources/native-binary/claude filter=lfs diff=lfs merge=lfs -text
